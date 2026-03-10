@@ -408,6 +408,29 @@ body {
   background: rgba(255, 255, 255, 0.25);
 }
 
+/* ========== Toast ========== */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  background: #38CDD6;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 /* ========== Selection ========== */
 ::selection {
   background: rgba(56, 205, 214, 0.3);

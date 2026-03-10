@@ -55,3 +55,30 @@ document.addEventListener('keydown', (e) => {
     showSection('#home');
   }
 });
+
+// ========== Email Copy Fallback ==========
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const email = link.getAttribute('href').replace('mailto:', '');
+    navigator.clipboard.writeText(email).then(() => {
+      showToast('Email copied to clipboard!');
+    });
+    window.location.href = link.getAttribute('href');
+  });
+});
+
+function showToast(message) {
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('visible'));
+  setTimeout(() => {
+    toast.classList.remove('visible');
+    setTimeout(() => toast.remove(), 300);
+  }, 2500);
+}
