@@ -393,11 +393,13 @@ body {
 @media (max-width: 768px) {
   .section {
     padding: 1.5rem;
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
     align-items: flex-start;
   }
 
   .section-inner {
-    padding: 2.5rem 1.5rem 4rem;
+    padding: 2.5rem 1.5rem;
+    padding-bottom: max(6rem, calc(env(safe-area-inset-bottom) + 5rem));
   }
 
   .hero-title {
@@ -440,7 +442,8 @@ body {
   }
 
   .section-inner {
-    padding: 2rem 1rem 4rem;
+    padding: 2rem 1rem;
+    padding-bottom: max(6rem, calc(env(safe-area-inset-bottom) + 5rem));
   }
 
   .icon-link {
