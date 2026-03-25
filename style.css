@@ -75,7 +75,7 @@ body {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
@@ -95,7 +95,9 @@ body {
   max-width: 52rem;
   width: 100%;
   padding: 4rem;
+  padding-bottom: 6rem;
   position: relative;
+  margin: auto 0;
 }
 
 /* ========== Typography ========== */
