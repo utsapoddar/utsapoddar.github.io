@@ -399,7 +399,7 @@ body {
 
   .section-inner {
     padding: 2.5rem 1.5rem;
-    padding-bottom: max(6rem, calc(env(safe-area-inset-bottom) + 5rem));
+    padding-bottom: max(8rem, calc(env(safe-area-inset-bottom) + 7rem));
   }
 
   .hero-title {
@@ -443,7 +443,7 @@ body {
 
   .section-inner {
     padding: 2rem 1rem;
-    padding-bottom: max(6rem, calc(env(safe-area-inset-bottom) + 5rem));
+    padding-bottom: max(8rem, calc(env(safe-area-inset-bottom) + 7rem));
   }
 
   .icon-link {
