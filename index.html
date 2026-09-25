@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utsa Poddar — Turning Ideas into Systems</title>
-  <meta name="description" content="Physics-trained developer and data scientist in Calgary. Bayesian modeling, LLM systems, and automated data pipelines — with the reasoning kept auditable.">
-  <meta property="og:title" content="Utsa Poddar — Turning Ideas into Systems">
-  <meta property="og:description" content="Physics-trained developer and data scientist. Bayesian modeling, LLM systems, and automated data pipelines.">
+  <title>Utsa Poddar — Data &amp; AI Engineer</title>
+  <meta name="description" content="Data &amp; AI Engineer in Calgary, AB. LLM integrations, retrieval systems, and AI agent tooling, with deterministic checks on model output.">
+  <meta property="og:title" content="Utsa Poddar — Data &amp; AI Engineer">
+  <meta property="og:description" content="LLM integrations, retrieval systems, and AI agent tooling, with deterministic checks on model output.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +27,9 @@
     <!-- Hero Section -->
     <section id="home" class="section hero-section active">
       <div class="section-inner">
-        <h1 class="hero-title anim-fade-left">Turning ideas into systems</h1>
+        <h1 class="hero-title anim-fade-left">Data &amp; AI Engineer</h1>
         <p class="hero-subtitle anim-fade-right">
-          I'm Utsa — physics&#8209;trained, currently completing a master's in data science. I build systems where the reasoning stays auditable: Bayesian models that report their own uncertainty, pipelines that run unattended, and LLM tools where a deterministic component holds the final say.
+          I'm Utsa Poddar. I build LLM integrations, retrieval systems, and tooling for AI agents, with deterministic code that checks what a model returns before anything ships. I'm looking for AI Engineer roles in Calgary or remote across Canada.
         </p>
         <div class="hero-buttons">
           <a href="#about" class="btn btn-primary anim-fade-left stagger-1" data-nav>About</a>
@@ -62,7 +62,7 @@
           Physics taught me to distrust a result I can't account for. That habit shapes how I build: models report their uncertainty instead of a single confident number, the deterministic part of a system stays in charge of the decision, and anything I claim about performance is measured rather than assumed.
         </p>
         <p class="section-text anim-fade-right">
-          I hold a BS in Physics from the University of Calgary and am completing an MS in Data Science at CU Boulder, with the university's AI certificate stacked inside the degree. Most of what I build ends up open source — pipelines, Bayesian estimators, and agent tooling you can read and run yourself.
+          I hold a BS in Physics from the University of Calgary and am working toward an MS in Data Science at CU Boulder, which includes the university's Artificial Intelligence graduate certificate; both are in progress. Before this I worked as a Business Intelligence Analyst, writing SQL and rebuilding KPI reports, and supervised a team of 11 as an Online Department Supervisor at Canadian Tire. Most of what I build ends up open source: LLM pipelines, retrieval and agent tooling, and estimators you can read and run yourself.
         </p>
         <div class="about-buttons">
           <a href="https://grizzly-scar-827.notion.site/Utsa-Poddar-28930eff6e2580278853e2888e3b29e7" target="_blank" rel="noopener" class="btn btn-primary anim-fade-left stagger-1">Resume / CV</a>
@@ -81,7 +81,7 @@
         <h2 class="section-title anim-fade-left">Projects</h2>
         <div class="divider anim-fade-left"></div>
         <p class="section-text anim-fade-right">
-          I build systems where the reasoning stays auditable — deterministic components hold the decisions, models advise, and results are measured rather than assumed. These are the ones running in production or open for inspection.
+          I build systems where the reasoning stays auditable — deterministic components hold the decisions, models advise, and results are measured rather than assumed. Every one is open for inspection.
         </p>
 
         <div class="project-card anim-fade-right stagger-1">
@@ -90,7 +90,7 @@
             <span class="project-tag">Live</span>
           </div>
           <p class="project-category">Python · GitHub Actions · LLM · SEC EDGAR</p>
-          <p class="project-desc" style="margin-bottom:0;">A weekly investor briefing that runs itself. Ingests SEC Form 4 and 13F filings, corporate crypto treasuries, commodity prices, and 12 news feeds; cross-references them against 25 tracked investors; summarizes behind a three-model retry chain; then emails subscribers and publishes to the web every Monday.</p>
+          <p class="project-desc" style="margin-bottom:0;">A weekly investor briefing on GitHub Actions. Ingests SEC Form 4 and 13F filings, corporate crypto treasuries, commodity prices, and 12 news feeds; joins them to a 25-entity watchlist; summarizes through a cross-provider model chain; then emails and publishes each issue every Monday. After four missed issues in a row, I rebuilt the summarizer's retry and fallback path, and every scheduled run since has succeeded.</p>
           <div class="project-buttons" style="margin-top:1rem;">
             <a href="https://utsapoddar.github.io/alpha-digest/" class="btn btn-primary">View Live →</a>
             <a href="https://github.com/utsapoddar/alpha-digest" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
@@ -111,6 +111,66 @@
 
         <div class="project-card anim-fade-right stagger-3">
           <div class="project-card-header">
+            <h3 class="project-title">DopaKernel</h3>
+            <span class="project-tag">Open Source</span>
+          </div>
+          <p class="project-category">Python · AI Agents · Claude Code Hooks</p>
+          <p class="project-desc" style="margin-bottom:0;">Completion control for AI coding agents. It freezes the objective into prioritized, verifiable requirements, picks the next action from recorded progress, and refuses to report completion until every requirement passes a fresh verifier, so a perceived better idea cannot quietly replace the instruction. The current kernel passes 90 unit tests and 54 structural checks.</p>
+          <div class="project-buttons" style="margin-top:1rem;">
+            <a href="https://github.com/utsapoddar/dopa-kernel" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card anim-fade-right stagger-4">
+          <div class="project-card-header">
+            <h3 class="project-title">Leafmark</h3>
+            <span class="project-tag">Live</span>
+          </div>
+          <p class="project-category">TypeScript · Next.js · LLM APIs</p>
+          <p class="project-desc" style="margin-bottom:0;">In-browser reading guides from PDF and EPUB books. A local extractive engine cites a page or section for every item. An optional provider layer connects the reader's own model, retries transient failures, repairs and validates structured output, and checkpoints each chunk so a model switch resumes instead of restarting. 31 tests.</p>
+          <div class="project-buttons" style="margin-top:1rem;">
+            <a href="https://utsapoddar.github.io/leafmark/" target="_blank" rel="noopener" class="btn btn-primary">View Live →</a>
+            <a href="https://github.com/utsapoddar/leafmark" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card anim-fade-right stagger-5">
+          <div class="project-card-header">
+            <h3 class="project-title">PCOS Food Scanner</h3>
+            <span class="project-tag">Prototype</span>
+          </div>
+          <p class="project-category">Python · Streamlit · Supabase · LLM</p>
+          <p class="project-desc" style="margin-bottom:0;">Scan a barcode or a photo and get a PCOS-aware score with serving advice. The nutrient scoring stays deterministic and rule-based; the model only personalizes and explains that score against your profile. Tested across scoring, vision, barcode parsing, and migrations.</p>
+          <div class="project-buttons" style="margin-top:1rem;">
+            <a href="https://github.com/utsapoddar/pcos-scanner" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card anim-fade-right stagger-6">
+          <div class="project-card-header">
+            <h3 class="project-title">MSDS Time Estimator</h3>
+            <span class="project-tag">Open Source</span>
+          </div>
+          <p class="project-category">Python · NumPy · SciPy · Bayesian Inference</p>
+          <p class="project-desc" style="margin-bottom:0;">Predicts how long a graduate course will take you, anchored on courses you have already finished. Course posteriors update from crowdsourced review data under a tempered weight, so heavily-reviewed courses tighten confidence without drowning the prior. Every prediction carries an 80% interval.</p>
+          <div class="project-buttons" style="margin-top:1rem;">
+            <a href="https://github.com/utsapoddar/msds-time-estimator" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card anim-fade-right stagger-7">
+          <div class="project-card-header">
+            <h3 class="project-title">Fraud Detection Pipeline</h3>
+          </div>
+          <p class="project-category">Python · scikit-learn · pandas</p>
+          <p class="project-desc" style="margin-bottom:0;">A reproducible fraud-classification pipeline over 284,807 credit-card transactions. A class-weighted Random Forest reaches 96% precision and 74% recall under stratified evaluation.</p>
+          <div class="project-buttons" style="margin-top:1rem;">
+            <a href="https://github.com/utsapoddar/Fintech-Project" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card anim-fade-right stagger-8">
+          <div class="project-card-header">
             <h3 class="project-title">Cadence</h3>
             <span class="project-tag">Live</span>
           </div>
@@ -122,43 +182,7 @@
           </div>
         </div>
 
-        <div class="project-card anim-fade-right stagger-4">
-          <div class="project-card-header">
-            <h3 class="project-title">MSDS Time Estimator</h3>
-            <span class="project-tag">Open Source</span>
-          </div>
-          <p class="project-category">Python · PyMC · Bayesian Inference</p>
-          <p class="project-desc" style="margin-bottom:0;">Predicts how long a graduate course will take you, anchored on courses you have already finished. Course posteriors update from crowdsourced review data under a tempered weight, so heavily-reviewed courses tighten confidence without drowning the prior. Every prediction carries an 80% interval.</p>
-          <div class="project-buttons" style="margin-top:1rem;">
-            <a href="https://github.com/utsapoddar/msds-time-estimator" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card anim-fade-right stagger-5">
-          <div class="project-card-header">
-            <h3 class="project-title">PCOS Food Scanner</h3>
-            <span class="project-tag">Open Source</span>
-          </div>
-          <p class="project-category">Python · Streamlit · Supabase · LLM</p>
-          <p class="project-desc" style="margin-bottom:0;">Scan a barcode or a photo and get a PCOS-aware score with serving advice. The nutrient scoring stays deterministic and rule-based; the model only personalizes and explains that score against your profile. Tested across scoring, vision, barcode parsing, and migrations.</p>
-          <div class="project-buttons" style="margin-top:1rem;">
-            <a href="https://github.com/utsapoddar/pcos-scanner" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card anim-fade-right stagger-6">
-          <div class="project-card-header">
-            <h3 class="project-title">DopaKernel</h3>
-            <span class="project-tag">Open Source</span>
-          </div>
-          <p class="project-category">Agent Architecture · LLM Tooling</p>
-          <p class="project-desc" style="margin-bottom:0;">A semantic completion controller for AI agents. It freezes the objective into prioritized, verifiable requirements, allocates the next action from explicit progress and information state, and refuses to report completion until every requirement passes a fresh verifier — so a perceived better idea cannot quietly replace the instruction. Its core allocation rules come from four primary results on dopamine prediction-error coding: three adopted, one documented as rejected.</p>
-          <div class="project-buttons" style="margin-top:1rem;">
-            <a href="https://github.com/utsapoddar/dopa-kernel" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card anim-fade-right stagger-7">
+        <div class="project-card anim-fade-right stagger-9">
           <div class="project-card-header">
             <h3 class="project-title">Sift Work Timer</h3>
             <span class="project-tag">Shipped</span>
@@ -167,39 +191,6 @@
           <p class="project-desc" style="margin-bottom:0;">Cross-platform work timer shipped as downloadable iOS and Android builds, with AltStore distribution for iOS. Automatic phase transitions, boundary alarms, and daily streak tracking keep sessions moving.</p>
           <div class="project-buttons" style="margin-top:1rem;">
             <a href="https://github.com/utsapoddar/sift-work-timer" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card anim-fade-right stagger-8">
-          <div class="project-card-header">
-            <h3 class="project-title">n8n Automation Workflows</h3>
-          </div>
-          <p class="project-category">n8n · APIs · AI · Workflow Automation</p>
-          <p class="project-desc" style="margin-bottom:0;">Importable n8n workflows for Discord AI agents and daily scheduled message analysis, combining Gemini, agent memory, structured outputs, and API integrations.</p>
-          <div class="project-buttons" style="margin-top:1rem;">
-            <a href="https://github.com/utsapoddar/n8n-projects" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card anim-fade-right stagger-9">
-          <div class="project-card-header">
-            <h3 class="project-title">Fraud Detection Pipeline</h3>
-          </div>
-          <p class="project-category">Python · scikit-learn · pandas</p>
-          <p class="project-desc" style="margin-bottom:0;">A reproducible fraud-classification pipeline over 284,807 credit-card transactions. A class-weighted Random Forest reaches 96% precision and 74% recall under stratified evaluation.</p>
-          <div class="project-buttons" style="margin-top:1rem;">
-            <a href="https://github.com/utsapoddar/Fintech-Project" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card anim-fade-right stagger-10">
-          <div class="project-card-header">
-            <h3 class="project-title">SQL Analytics Examples</h3>
-          </div>
-          <p class="project-category">SQL · Data Analytics · Database Design</p>
-          <p class="project-desc" style="margin-bottom:0;">Executable SQL examples and a schema diagram covering table creation, joins, subqueries, grouping, and aggregation against a modeled company database.</p>
-          <div class="project-buttons" style="margin-top:1rem;">
-            <a href="https://github.com/utsapoddar/SQL-queries" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
           </div>
         </div>
 
@@ -225,7 +216,7 @@
         <div class="edu-card anim-fade-right stagger-1">
           <h3 class="edu-title">MS Data Science <span class="project-tag" style="vertical-align:middle;">In Progress</span></h3>
           <p class="edu-institution">University of Colorado Boulder</p>
-          <p class="edu-details">Graduate coursework in probability theory, statistical inference and estimation, and data science practice — earned an A in each completed course to date. The university's Artificial Intelligence graduate certificate stacks inside the degree.</p>
+          <p class="edu-details">Graduate coursework in probability theory, statistical inference and estimation, and data science practice — earned an A in each completed course to date. Includes the university's Artificial Intelligence graduate certificate, also in progress.</p>
         </div>
 
         <div class="edu-card anim-fade-right stagger-2">
@@ -255,7 +246,7 @@
         <h2 class="section-title anim-fade-left">Get in Touch</h2>
         <div class="divider anim-fade-left"></div>
         <p class="section-text anim-fade-right">
-          I'm open to data science, machine learning, and backend or automation roles, and I'm based in Calgary. If something here looks relevant to your team, or you just want to talk through a problem, get in touch.
+          I'm looking for AI Engineer roles, and for AI-enabled data engineering: on-site or hybrid in Calgary, or remote anywhere in Canada. If something here looks relevant to your team, or you just want to talk through a problem, get in touch.
         </p>
         <div class="contact-buttons">
           <a href="mailto:utsapoddarjobs@gmail.com" class="btn btn-primary anim-fade-left stagger-1">
