@@ -178,7 +178,7 @@ try {
 
 /* ---------- smooth scroll + ScrollTrigger ---------- */
 gsap.registerPlugin(ScrollTrigger);
-const lenis = new Lenis({ lerp: 0.1, smoothWheel: !reduce });
+const lenis = new Lenis({ lerp: 0.1, smoothWheel: !reduce, syncTouch: !reduce });   // touch scrolling and its glide run in JS, so iOS never enters its native momentum state that silences motion sensors
 lenis.on('scroll', (e) => { ScrollTrigger.update(); $('#nav').classList.toggle('scrolled', e.scroll > 40); });
 gsap.ticker.add((t) => lenis.raf(t * 1000));
 gsap.ticker.lagSmoothing(0);
