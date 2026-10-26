@@ -116,6 +116,23 @@ function initScene() {
     }, 1500);
   }
 
+  /* ?hud: live sensor readout, to see whether readings keep arriving while a finger scrolls */
+  if (/[?&]hud/.test(location.search)) {
+    const hud = document.createElement('pre');
+    hud.style.cssText = 'position:fixed;left:8px;bottom:8px;z-index:99;margin:0;padding:8px 10px;font:11px/1.45 ui-monospace,Menlo,monospace;color:#38cdd6;background:rgba(13,17,23,.92);border:1px solid #38cdd6;border-radius:8px;pointer-events:none';
+    document.body.appendChild(hud);
+    let oc = 0, mc = 0, last = { g: 0, b: 0 }, lastScroll = -1e9;
+    addEventListener('deviceorientation', (e) => { oc++; last = { g: e.gamma, b: e.beta }; });
+    addEventListener('devicemotion', () => { mc++; });
+    addEventListener('scroll', () => { lastScroll = performance.now(); }, { passive: true });
+    const f = (v) => (v == null ? 'n/a' : v.toFixed(0));
+    setInterval(() => {
+      const sc = performance.now() - lastScroll < 250;
+      hud.textContent = `${sc ? 'SCROLLING' : 'still'}\norientation ${oc * 4}/s\nmotion      ${mc * 4}/s\ngamma ${f(last.g)}  beta ${f(last.b)}\ntilt  ${tgt.x.toFixed(2)} ${tgt.y.toFixed(2)}`;
+      oc = mc = 0;
+    }, 250);
+  }
+
   let lastW = 0, lastH = 0;
   function resize() {
     const w = canvas.clientWidth || innerWidth, h = canvas.clientHeight || innerHeight;
