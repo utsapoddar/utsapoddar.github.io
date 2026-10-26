@@ -94,8 +94,8 @@ function initScene() {
   function onTilt(e) {
     if (e.gamma == null || e.beta == null) return;
     if (!base) base = { g: e.gamma, b: e.beta };
-    base.g += (e.gamma - base.g) * 0.01;
-    base.b += (e.beta - base.b) * 0.01;
+    base.g += (e.gamma - base.g) * 0.002;
+    base.b += (e.beta - base.b) * 0.002;   // slow re-centre so a held tilt keeps working while you scroll
     tgt.x = clamp((e.gamma - base.g) / 22);
     tgt.y = clamp((e.beta - base.b) / 22);
     gyro = true;
@@ -138,7 +138,7 @@ function initScene() {
     mouse.x += (tgt.x - mouse.x) * 0.06;
     mouse.y += (tgt.y - mouse.y) * 0.06;
     const k = reduce ? 0 : 1;
-    const gain = gyro ? 1.2 : 0.8;
+    const gain = gyro ? 0.84 : 0.8;   // tilt strength: 30% below the previous 1.2
     smooth += (Math.max(0, window.scrollY) - smooth) * 0.08;   // clamp rubber-band, smooth stepped readings
     group.rotation.y = t * 0.12 * k + mouse.x * gain + smooth * 0.0012;
     group.rotation.x = mouse.y * gain * 0.7 + Math.sin(t * 0.2) * 0.1 * k;
